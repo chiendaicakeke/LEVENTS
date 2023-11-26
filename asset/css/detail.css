@@ -95,6 +95,7 @@ html {
   position: fixed;
   top: 130px;
   z-index: 10;
+  padding: 0 50px;
 }
 .menu__1 {
   display: flex;
@@ -407,16 +408,17 @@ html {
   z-index: 1000;
 }
 
+.img {
+  margin-top: -200px;
+}
 /* BTN */
 
-button#centerButton {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
+button#AddOrder {
+  margin-left: 200px;
   transform: translateX(-50%);
   background-color: #ffffff;
   color: #060606;
-  padding: 10px 20px;
+  margin-top: 30px;
   cursor: pointer;
   width: 400px;
   height: 50px;
@@ -424,7 +426,7 @@ button#centerButton {
   z-index: 1;
   border: 1px #908e8e solid;
 }
-button#centerButton::after {
+button#AddOrder::after {
   content: "";
   position: absolute;
   width: 0;
@@ -432,7 +434,7 @@ button#centerButton::after {
   background: #010101;
   transition: width 0.3s ease;
 }
-button#centerButton::after {
+button#AddOrder::after {
   content: "";
   display: block;
   width: 0;
@@ -445,11 +447,11 @@ button#centerButton::after {
   transition: 0.5s ease;
   z-index: -1;
 }
-button#centerButton:hover {
+button#AddOrder:hover {
   color: #ffffff;
 }
 
-button#centerButton:hover::after {
+button#AddOrder:hover::after {
   display: flex;
   align-items: center;
   width: 100%;
@@ -462,15 +464,90 @@ button#centerButton:hover::after {
   width: 50%;
 }
 .right {
-  width: 50%;
+  width: 35%;
 }
 .tittle {
   font-size: 30px;
 }
 .gia {
-  margin-top: 10px;
   font-size: 25px;
-  font-weight: lighter;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.text-color {
+  font-weight: bold;
+}
+.txt {
+  margin-top: 20px;
+  font-size: 20px;
 }
 
+.line {
+  margin-top: 20px;
+  border-bottom: 1px solid #514f4f; /* Màu đen, độ dày 1px */
+}
 /* ------------------------------------------ */
+.size-container {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  margin-top: 30px;
+}
+.TextSize {
+  margin-right: 30px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+p {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+input[type="radio"] {
+  transform: scale(2);
+  font-size: 18px;
+}
+
+.custom-radio input[type="radio"] {
+  transform: scale(2);
+  font-size: 18px;
+}
+.info-title {
+  margin-top: 20px;
+}
+.img-size {
+  height: 750px;
+  width: 500px;
+  display: none;
+}
+.BangSize {
+  margin-top: 20px;
+}
+.BaoHanh {
+  margin-left: 5px;
+}
+.infor {
+  display: none;
+}
+.info-title {
+  font-weight: bold;
+}
+.bang-size {
+  font-weight: bold;
+}
+.policy-title {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.policy-content {
+  display: none;
+}
+.left {
+  display: flex;
+}

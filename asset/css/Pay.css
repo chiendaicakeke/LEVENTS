@@ -1,0 +1,84 @@
+#content {
+  justify-content: space-between;
+}
+.ship-info,
+.order {
+  width: 50%;
+  height: 100%;
+  padding: 0 80px;
+}
+.menu {
+  padding: 0 60px;
+}
+.secret {
+  border-left: 1px solid #c2c0c0; /* Màu và kích thước đường kẻ dọc */
+  height: 100%auto; /* Chiều cao của đường kẻ */
+}
+
+.wh-account {
+  margin-top: 20px;
+  display: block;
+}
+.wh-account a {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+}
+.name,
+.email,
+.sdt,
+.Birth,
+.adress,
+.city,
+.distric,
+.cuthe {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px #dadada solid;
+  height: 90px;
+  font-size: 18px;
+}
+.email,
+.sdt {
+  width: 48%;
+}
+.sdt {
+  margin-left: 28px;
+}
+.Birth {
+  width: 33%;
+}
+.adress {
+  width: 60%;
+  margin-left: 53px;
+}
+select {
+  color: #797373;
+}
+.city,
+.distric,
+.cuthe {
+  width: 32%;
+}
+.distric,
+.cuthe {
+  margin-left: 12px;
+}
+.gift {
+  margin-top: 40px;
+}
+.button-gift {
+  margin-top: 2px;
+  height: 20px;
+  width: 30px;
+}
+.check-gift {
+  margin-top: 15px;
+}
+.back-shop {
+  margin-top: 100px;
+}
+.backshop {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+}
