@@ -1,544 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./asset/css/all.css" />
-    <link
-      rel="stylesheet"
-      href="./asset/font/fontawesome-free-6.4.0-web/css/all.min.css"
-    />
-    <title>Levents®</title>
-  </head>
-  <body>
-    <h1>123</h1>
-    <header id="header">
-      <div class="header-banner">
-        <div class="header-banner1">
-          <i class="fa-solid fa-earth-americas"></i>
-          <span class="ship">FREE SHIP CHO HÓA ĐƠN TỪ 1.000.000</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./asset/css/all.css" />
+        <link rel="stylesheet" href="./asset/font/fontawesome-free-6.4.0-web/css/all.min.css" />
+        <title>Levents®</title>
+    </head>
+    <body ng-app="AppBanHang" ng-controller="AllCtrl">
+
+        <header id="header">
+            <div class="header-banner">
+                <div class="header-banner1">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span class="ship">FREE SHIP CHO HÓA ĐƠN TỪ 1.000.000</span>
+                </div>
+                <div class="header-banner2">
+                    <span class="mua">MUA NGAY ! </span>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-logo">
+                    <img class="logo" src="/asset/img/logo.png" alt="" />
+                </div>
+
+                <div class="button">
+                    <ul class="button__ul">
+                        <li class="button__li">
+                            <i class="fa-regular fa-bell"></i>
+                        </li>
+                        <li class="button__li">
+                            <p class="spyt">Sản phẩm yêu thích</p>
+                        </li>
+                        <li class="button__li">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                        <li class="button__li cart">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </li>
+                        <li class="button__li">
+                            <i class="fa-regular fa-circle-user"></i>
+                        </li>
+                        <li class="button__li">
+                            <img class="vietnam" src="/asset/img/tải xuống.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ul class="menu__1">
+                    <li class="menu__2">
+                        <a href="" class="menu__3">Về chúng tôi</a>
+                    </li>
+                    <li class="menu__2">
+                        <a href="" class="menu__3">Cửa hàng v</a>
+                        <ul class="menu__4">
+                            <li class="menu__5">
+                                <a href="" class="menu__6">Tất cả</a>
+                            </li>
+                            <li class="menu__5">
+                                <a href="" class="menu__6">Áo</a>
+                            </li>
+                            <li class="menu__5">
+                                <a href="" class="menu__6">Quần</a>
+                            </li>
+                            <li class="menu__5">
+                                <a href="" class="menu__6">Áo khoác</a>
+                            </li>
+                            <li class="menu__5">
+                                <a href="" class="menu__6">Phụ kiện</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__2">
+                        <a href="" class="sale">Giảm giá</a>
+                    </li>
+                    <li class="menu__2">
+                        <a href="" class="menu__3">Bộ sưu tập</a>
+                    </li>
+                    <li class="menu__2">
+                        <a href="" class="menu__3">Bộ phối</a>
+                    </li>
+                    <li class="menu__2">
+                        <a href="" class="menu__3">Bài viết</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="content">
+            <div class="product">
+                <div class="title">TẤT CẢ SẢN PHẨM CỦA LEVENTS®</div>
+            </div>
+            <div class="goods">
+
+                <div class="box_tee" ng-repeat="x in ListSanPham">
+                    <div class="img_tee">
+                        <img src="{{x.image}}" alt="{{x.productName}}" />
+                        <img class="img_hover" src="{{x.imageAfter}}" alt="{{x.productName}}" />
+                    </div>
+                    <h4 class="text_tee" style="color: gray">{{x.productName}}</h4>
+                    <div class="line_tee">
+                        <span class="old-price">440.000vnđ</span>
+                    </div>
+                    <div class="new-price">
+                        <span class="new-price_2">{{x.price}}vnđ</span>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- ------------------------------------------------ -->
+            
         </div>
-        <div class="header-banner2">
-          <span class="mua">MUA NGAY ! </span>
-          <i class="fa-solid fa-circle-arrow-right"></i>
+        
+
+        <div id="footer">
+            <div class="footer_2">
+                <h3 class="title_4">VỀ CHÚNG TÔI</h3>
+                <div class="title_5" style="color: gray">Levents® - Popular Streetwear Brand</div>
+                <div class="title_6">
+                    <ul style="color: gray">
+                        <li>HỘ KINH DOANH Red Label</li>
+
+                        <li>GPKD được cấp bởi Cục Cảnh sát QLHC & TTXH</li>
+
+                        <li>Trụ sở hộ kinh doanh: 842 Sư Vạn Hạnh, Phường 13, Quận 10, Tp. Hồ Chí Minh</li>
+
+                        <li>Mä só thuê: 41J8031547</li>
+
+                        <li>Ngày cấp: 06/07/2021</li>
+
+                        <li>Người đại diện: Nguyễn Trần Duy Khiết</li>
+
+                        <li>Mã Số thuế cá nhân: 8748861448-001</li>
+                    </ul>
+                </div>
+                <div class="chungnhan">
+                    <img class="img_chungnhan" src="/asset/img/logoSaleNoti-1.png" alt="" />
+                </div>
+            </div>
+            <div class="footer_3">
+                <div class="colum_1">
+                    <h3 class="title_colum">LIÊN HỆ</h3>
+                    <ul class="cl1">
+                        <li>Hotline</li>
+                        <li id="bold">1900633028</li>
+                        <li id="infor">Email</li>
+                        <li id="bold">Customer@levents.asia</li>
+                        <li id="infor">Thứ Hai-Chủ nhật</li>
+                        <li id="bold">9:30~21:30</li>
+                        <li id="infor">Email liên hệ công việc</li>
+                        <li id="bold">business@levents.asia</li>
+                    </ul>
+                </div>
+                <div class="colum_2">
+                    <h3 class="title_colum2">DANH MỤC SẢN PHẨM</h3>
+                    <ul class="cl2">
+                        <li>Tất cả</li>
+                        <li>New Arrival</li>
+                        <li>Áo</li>
+                        <li>Quần</li>
+                        <li>Outerwear</li>
+                        <li>Ba lô</li>
+                    </ul>
+                </div>
+                <div class="colum_3">
+                    <h3 class="title_colum3">HỖ TRỢ</h3>
+                    <ul class="cl3">
+                        <li>LÌ VEN FABRIC</li>
+                        <li>Tài khoản</li>
+                        <li>Chính sách vận chuyển</li>
+                        <li>Thanh toán trực tuyến</li>
+                        <li>Chính sách bảo mật</li>
+                    </ul>
+                </div>
+
+                <div class="colum_4">
+                    <h3 class="title_colum4">CỬA HÀNG</h3>
+                    <ul class="cl4">
+                        <li>842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM</li>
+                        <li>The New Playground, 04, Quận 1, HCM</li>
+                        <li>54, Mậu Thân, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="navbar">
-        <div class="navbar-logo">
-          <img class="logo" src="/asset/img/logo.png" alt="" />
-        </div>
+    </body>
+    <button id="scrollToTopBtn">&#9650;</button>
 
-        <div class="button">
-          <ul class="button__ul">
-            <li class="button__li">
-              <i class="fa-regular fa-bell"></i>
-            </li>
-            <li class="button__li">
-              <p class="spyt">Sản phẩm yêu thích</p>
-            </li>
-            <li class="button__li">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
-            <li class="button__li cart">
-              <i class="fa-solid fa-bag-shopping"></i>
-            </li>
-            <li class="button__li">
-              <i class="fa-regular fa-circle-user"></i>
-            </li>
-            <li class="button__li">
-              <img class="vietnam" src="/asset/img/tải xuống.png" alt="" />
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="menu">
-        <ul class="menu__1">
-          <li class="menu__2">
-            <a href="" class="menu__3">Về chúng tôi</a>
-          </li>
-          <li class="menu__2">
-            <a href="" class="menu__3">Cửa hàng v</a>
-            <ul class="menu__4">
-              <li class="menu__5">
-                <a href="" class="menu__6">Tất cả</a>
-              </li>
-              <li class="menu__5">
-                <a href="" class="menu__6">Áo</a>
-              </li>
-              <li class="menu__5">
-                <a href="" class="menu__6">Quần</a>
-              </li>
-              <li class="menu__5">
-                <a href="" class="menu__6">Áo khoác</a>
-              </li>
-              <li class="menu__5">
-                <a href="" class="menu__6">Phụ kiện</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__2">
-            <a href="" class="sale">Giảm giá</a>
-          </li>
-          <li class="menu__2">
-            <a href="" class="menu__3">Bộ sưu tập</a>
-          </li>
-          <li class="menu__2">
-            <a href="" class="menu__3">Bộ phối</a>
-          </li>
-          <li class="menu__2">
-            <a href="" class="menu__3">Bài viết</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-
-    <div id="content">
-      <div class="product">
-        <div class="title">TẤT CẢ SẢN PHẨM CỦA LEVENTS®</div>
-      </div>
-      <div class="goods">
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/somitruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/somisau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® CLASSIC STRIPED SLEEVE SHIRT/ BLUE
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">440.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">410.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/jeantruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/jeansau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® WASH STRAIGHT JEANS/ BLUE
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">580.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">540.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/shirttruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/shirtsau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® BICHONTOUR BASIC SHIRT/ WHITE
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">380.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">340.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/aocreamtruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/aocreamsau.png" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® DORAEMON SPECIAL TEE/ CREAM
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">380.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">315.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/jacketcroptruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/jacketcropsau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® | POPPOP JACKET CROP/ BLACK
-            </h4>
-            <p class="price">580.000 vnđ</p>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/aogreentruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/aogreensau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® COMPANY & MATES TEE/ DARK GREEN
-            </h4>
-            <p class="price">380.000 vnđ</p>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/aotuyliptruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/aotuylipsau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® 2TUYLIP FLW TEE/ CREAM
-            </h4>
-            <p class="price">380.000 vnđ</p>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/hatrangtruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/hatrangsau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® LEEMEE BOXY TEE/ WHITE
-            </h4>
-            <p class="price">280.000 vnđ</p>
-          </div>
-        </div>
-      </div>
-      <!-- ------------------------------------------------ -->
-      <div class="goods">
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/tuitruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/tuisau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® MINI SHOULDER BAG/ BLACK
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">350.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">333.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/sweatertruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/sweatersau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® CLASSIC SWEATER/ BLUE
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">490.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">450.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/shorttruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/shortsau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® CLASSIC SHORTPANTS/ BLACK
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">390.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">340.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/quantruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/quansau.jpg" alt="" />
-          </div>
-          <h4 class="text_tee" style="color: gray">
-            LEVENTS® CLASSIC TRACK PANTS/ BLACK
-          </h4>
-          <div class="line_tee">
-            <span class="old-price">480.000vnđ</span>
-          </div>
-          <div class="new-price">
-            <span class="new-price_2">432.000vnđ</span>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/polotruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/polosau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® KNIT POLO/ BLACK
-            </h4>
-            <p class="price">450.000 vnđ</p>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/mutruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/musau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® CLASSIC CAP/ BLUE
-            </h4>
-            <p class="price">310.000 vnđ</p>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/jackettruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/jacketsau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® CLASSIC BLOCK JACKET/ BLACK
-            </h4>
-            <p class="price">590.000 vnđ</p>
-          </div>
-        </div>
-
-        <div class="box_tee">
-          <div class="img_tee">
-            <img src="/asset/img/balotruoc.jpg" alt="" />
-            <img class="img_hover" src="/asset/img/balosau.jpg" alt="" />
-          </div>
-          <div class="price_tee">
-            <h4 class="text_tee" style="color: gray">
-              LEVENTS® CLASSIC BACKPACK/ BLACK
-            </h4>
-            <p class="price">500.000 vnđ</p>
-          </div>
-        </div>
-      </div>
-    </div>
-<!-- ---------------------------------------------------------- -->
-<div class="goods">
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/bombertruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/bombersau.jpg" alt="" />
-    </div>
-    <h4 class="text_tee" style="color: gray">
-      LEVENTS® PUNCH VARSITY BLACK/ RED
-    </h4>
-    <div class="line_tee">
-      <span class="old-price">580.000vnđ</span>
-    </div>
-    <div class="new-price">
-      <span class="new-price_2">550.000vnđ</span>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/babyteetruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/babyteesau.jpg" alt="" />
-    </div>
-    <h4 class="text_tee" style="color: gray">
-      LEVENTS® LOVE RING REGULAR TEE/ LIGHT BROWN
-    </h4>
-    <div class="line_tee">
-      <span class="old-price">390.000vnđ</span>
-    </div>
-    <div class="new-price">
-      <span class="new-price_2">360.000vnđ</span>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/cargantruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/cargansau.jpg" alt="" />
-    </div>
-    <h4 class="text_tee" style="color: gray">
-      LEVENTS® PLAY LOGO CARDIGAN/ BLACK
-    </h4>
-    <div class="line_tee">
-      <span class="old-price">350.000vnđ</span>
-    </div>
-    <div class="new-price">
-      <span class="new-price_2">320.000vnđ</span>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/cargotruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/cargosau.jpg" alt="" />
-    </div>
-    <h4 class="text_tee" style="color: gray">
-      LEVENTS® | POPPOP CARGO PANTS/ BLACK
-    </h4>
-    <div class="line_tee">
-      <span class="old-price">450.000vnđ</span>
-    </div>
-    <div class="new-price">
-      <span class="new-price_2">400.000vnđ</span>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/casautruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/casausau.jpg" alt="" />
-    </div>
-    <div class="price_tee">
-      <h4 class="text_tee" style="color: gray">
-        LEVENTS® FUNNY CROCODILE TEE/ BLUE
-      </h4>
-      <p class="price">340.000 vnđ</p>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/hoobietruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/hoobiesau.jpg" alt="" />
-    </div>
-    <div class="price_tee">
-      <h4 class="text_tee" style="color: gray">
-        LEVENTS® POPULAR LOGO 2.0 HOODIE/ CREAM
-      </h4>
-      <p class="price">510.000 vnđ</p>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/poppoptruoc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/poppopsau.jpg" alt="" />
-    </div>
-    <div class="price_tee">
-      <h4 class="text_tee" style="color: gray">
-        LEVENTS® | POPPOP FRIENDS TEE/ GREY
-      </h4>
-      <p class="price">290.000 vnđ</p>
-    </div>
-  </div>
-
-  <div class="box_tee">
-    <div class="img_tee">
-      <img src="/asset/img/jacketredtrc.jpg" alt="" />
-      <img class="img_hover" src="/asset/img/jacketredsau.jpg" alt="" />
-    </div>
-    <div class="price_tee">
-      <h4 class="text_tee" style="color: gray">
-        LEVENTS® SPORTY JACKET/ RED
-      </h4>
-      <p class="price">550.000 vnđ</p>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
-
-    <div id="footer">
-      <div class="footer_2">
-        <h3 class="title_4">VỀ CHÚNG TÔI</h3>
-        <div class="title_5" style="color: gray">
-          Levents® - Popular Streetwear Brand
-        </div>
-        <div class="title_6">
-          <ul style="color: gray">
-            <li>HỘ KINH DOANH Red Label</li>
-
-            <li>GPKD được cấp bởi Cục Cảnh sát QLHC & TTXH</li>
-
-            <li>
-              Trụ sở hộ kinh doanh: 842 Sư Vạn Hạnh, Phường 13, Quận 10, Tp. Hồ
-              Chí Minh
-            </li>
-
-            <li>Mä só thuê: 41J8031547</li>
-
-            <li>Ngày cấp: 06/07/2021</li>
-
-            <li>Người đại diện: Nguyễn Trần Duy Khiết</li>
-
-            <li>Mã Số thuế cá nhân: 8748861448-001</li>
-          </ul>
-        </div>
-        <div class="chungnhan">
-          <img
-            class="img_chungnhan"
-            src="/asset/img/logoSaleNoti-1.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="footer_3">
-        <div class="colum_1">
-          <h3 class="title_colum">LIÊN HỆ</h3>
-          <ul class="cl1">
-            <li>Hotline</li>
-            <li id="bold">1900633028</li>
-            <li id="infor">Email</li>
-            <li id="bold">Customer@levents.asia</li>
-            <li id="infor">Thứ Hai-Chủ nhật</li>
-            <li id="bold">9:30~21:30</li>
-            <li id="infor">Email liên hệ công việc</li>
-            <li id="bold">business@levents.asia</li>
-          </ul>
-        </div>
-        <div class="colum_2">
-          <h3 class="title_colum2">DANH MỤC SẢN PHẨM</h3>
-          <ul class="cl2">
-            <li>Tất cả</li>
-            <li>New Arrival</li>
-            <li>Áo</li>
-            <li>Quần</li>
-            <li>Outerwear</li>
-            <li>Ba lô</li>
-          </ul>
-        </div>
-        <div class="colum_3">
-          <h3 class="title_colum3">HỖ TRỢ</h3>
-          <ul class="cl3">
-            <li>LÌ VEN FABRIC</li>
-            <li>Tài khoản</li>
-            <li>Chính sách vận chuyển</li>
-            <li>Thanh toán trực tuyến</li>
-            <li>Chính sách bảo mật</li>
-          </ul>
-        </div>
-
-        <div class="colum_4">
-          <h3 class="title_colum4">CỬA HÀNG</h3>
-          <ul class="cl4">
-            <li>842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM</li>
-            <li>The New Playground, 04, Quận 1, HCM</li>
-            <li>54, Mậu Thân, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
-  <button id="scrollToTopBtn">&#9650;</button>
-  <script src="/main.js"></script>
+    <script src="./asset/js/global.js"></script>
+    <script src="./asset/js/angular.min.js"></script>
+    <script src="./asset/js/jquery-3.6.0.min.js"></script>
+    <script src="./asset/js/all.js"></script>
 </html>

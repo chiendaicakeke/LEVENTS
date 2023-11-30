@@ -524,7 +524,6 @@ input[type="radio"] {
 .img-size {
   height: 750px;
   width: 500px;
-  display: none;
 }
 .BangSize {
   margin-top: 20px;
@@ -532,9 +531,7 @@ input[type="radio"] {
 .BaoHanh {
   margin-left: 5px;
 }
-.infor {
-  display: none;
-}
+
 .info-title {
   font-weight: bold;
 }
@@ -545,9 +542,7 @@ input[type="radio"] {
   margin-top: 20px;
   font-weight: bold;
 }
-.policy-content {
-  display: none;
-}
+
 .left {
   display: flex;
 }
