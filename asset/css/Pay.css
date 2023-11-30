@@ -82,3 +82,40 @@ select {
   text-decoration: none;
   color: rgb(0, 140, 255);
 }
+.order__item {
+  display: flex;
+}
+.img__order {
+  height: 200px;
+}
+.order__text {
+  margin-top: 40px;
+  margin-left: 100px;
+}
+.txt__size {
+  margin-top: 10px;
+}
+.soluong__order {
+  margin-top: 10px;
+}
+hr {
+  border: 1px #ebebeb solid;
+  margin: 20px 0;
+}
+.total {
+  padding-top: 20px;
+  font-size: 20px;
+}
+.total1 {
+  align-items: center;
+}
+.total__text {
+  margin-right: auto;
+}
+.total__number {
+  margin-right: 0;
+}
+.total1 {
+  display: flex;
+  justify-content: space-between;
+}
