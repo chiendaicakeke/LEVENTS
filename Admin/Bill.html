@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ADMIN.LEVENTS</title>
+        <link rel="stylesheet" href="../asset/css/grid.css" />
+        <link rel="stylesheet" href="../asset/css/mainAdmin.css" />
+
+        <link
+            href="https: //fonts.googleapis.com/css2? family = Roboto: wght @ 300; 400; 500; 700 & display = swap "
+            rel=" stylesheet "
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    </head>
+
+    <body ng-app="AppBanHang" ng-controller="BillCtrl">
+        <div class="app">
+            <!-- Header -->
+            <header class="header">
+                <div class="grid d-flex-center">
+                    <!-- Header logo -->
+                    <div class="header_logo">
+                        <a href="./MainAdmin.html" class="header_logo-link">
+                            <!-- Header logo -->
+                            <div class="header_logo">
+                                <a href="./MainAdmin.html" class="header_logo-link">
+                                    <img class="logo" src="../asset/img/logo.png" alt="" />
+                                </a>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Header Actions -->
+                    <div class="header_actions">
+                        <!-- User Menu -->
+                        <div aria-expanded="false" class="header_actions-avatar icon">
+                            <img class="avatar" src="../asset/img/OIP.jfif" alt="" />
+                            <h3>Chjen</h3>
+                        </div>
+                        <div aria-hidden="true" id="userMenu" class="header_userMenu userMenu-wrapper">
+                            <div class="userMenu_user">
+                                <div class="userMenu_user-avatar">
+                                    <img class="avatar" src="../assets/img/apple-touch-icon.webp" alt="" />
+                                </div>
+                                <div class="userMenu_info">
+                                    <span class="userMenu_info-name">Chjen</span>
+                                    <div class="userMenu_info-username">@chjendaica</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Container -->
+            <div class="container">
+                <!-- Sidebar -->
+                <div class="sideBar">
+                    <div class="sideBar_wrapper fixed">
+                        <ul class="sideBar_list">
+                            <li class="sideBar_item">
+                                <a href="Tongquan.html" title="Tổng quan" id="tongQuan" class="sideBar_item-link">
+                                    <span class="text sideBar_item-text">Trang Chủ</span>
+                                </a>
+                            </li>
+
+                            <li class="sideBar_item">
+                                <a href="./Product.html" id="road-map" class="sideBar_item-link">
+                                    <span class="text sideBar_item-text">Sản Phẩm</span>
+                                </a>
+                            </li>
+
+                            <li class="sideBar_item">
+                                <a href="./Bill.html" id="blog" class="sideBar_item-link">
+                                    <span class="text sideBar_item-text">Hóa Đơn</span>
+                                </a>
+                            </li>
+                            <li class="sideBar_item">
+                                <a href="./ThongKe.html" id="blog" class="sideBar_item-link">
+                                    <span class="text sideBar_item-text">Thống kê</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div id="content" class="content">
+                    <div class="grid">
+                        <div class="title">
+                            <h3>Thông tin Hóa đơn</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col l-4">
+                                <div class="mt-4">
+                                    <form name="form" class="row needs-validation" method="POST">
+                                        <div class="col l-12 mt-12">
+                                            <label for="name" class="form-label">Mã sản phẩm</label>
+                                            <input
+                                                type="text"
+                                                value="0"
+                                                class="form-control"
+                                                id="billId"
+                                                name="billId"
+                                            />
+                                        </div>
+
+                                        <div class="col l-12 mt-12">
+                                            <label for="name" class="form-label">Tổng giá</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="totalPrice"
+                                                name="totalPrice"
+                                            />
+                                        </div>
+
+                                        <div class="col l-12 mt-12">
+                                            <label for="status" class="form-label">Trạng thái</label>
+                                            <select class="form-select" id="status" name="status">
+                                                <option selected disabled value="">Choose...</option>
+                                                <option value="false">Chưa được xác nhận</option>
+                                                <option value="true">Đã xác nhận</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col l-12 mt-12">
+                                            <label for="image" class="form-label">Mã khách hàng</label>
+                                            <input type="text" class="form-control" id="customerId" name="customerId" />
+                                        </div>
+
+                                        <div class="col l-12 mt-12">
+                                            <button id="btn-add-Bill" class="btn btn-primary" type="submit">
+                                                Thêm
+                                            </button>
+                                            <button id="btn-update-Bill" class="btn btn-primary" type="submit">
+                                                Sửa
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col l-8">
+                                <div class="mt-4">
+                                    <div class="search">
+                                        <input type="text" class="search-type" placeholder="Nhập mã, tên sản phẩm..." />
+                                        <button class="btn btn-primary btn-search">
+                                            <i class="fas fas fa-search"></i> Tìm kiếm
+                                        </button>
+                                    </div>
+
+                                    <form name="container-form" action="">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">#</th>
+                                                    <th scope="col">Mã hóa đơn</th>
+                                                    <th scope="col">Tổng giá</th>
+                                                    <th scope="col">Trạng thái</th>
+                                                    <th scope="col">Tên khách hàng</th>
+                                                    <th scope="col" colspan="2">Thời gian</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="Bill-item" ng-repeat="x in listItem.data">
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                value="{{x.billId}}"
+                                                                name="billIds[]"
+                                                            />
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row">{{$index + 1}}</th>
+                                                    <td>{{x.billId}}</td>
+                                                    <td>{{x.totalPrice}}</td>
+                                                    <td>{{x.status}}</td>
+                                                    <td>{{x.customerName}}</td>
+                                                    <td>{{x.createdAt}}</td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn-link btn-delete-Bill"
+                                                            data-id="{{x.billId}}"
+                                                        >
+                                                            Xóa
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </div>
+
+                                <div class="padding-box">
+                                    <div class="box-sum">
+                                        <div class="box-left">
+                                            Số lượng sản phẩm:
+                                            <span id="soluong">{{listItem.totalItems}}</span>
+                                        </div>
+                                        <div class="box-right">
+                                            <button class="btn-primary">
+                                                <i class="fas fa-angle-left"></i>
+                                            </button>
+                                            <div class="navigation"></div>
+
+                                            <button class="btn-primary">
+                                                <i class="fas fa-angle-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 6px;">
+                            
+                            <div class="col l-4"></div>
+                            <div class="col l-7 detail-bill">
+                                <div class="title">
+                                    <h4>Thông tin chi tiết Hóa đơn</h4>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="2">#</th>
+                                            <th scope="col">Mã CT hóa đơn</th>
+                                            <th scope="col">giá</th>
+                                            <th scope="col">Số lượng</th>
+                                            <th scope="col">Mã sản phẩm</th>
+                                            <th scope="col" colspan="2">Thời gian</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="Bill-item"  ng-repeat="x in listDetail">
+                                            <td>
+                                                <div class="form-check">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value="{{x.billId}}"
+                                                        name="billIds[]"
+                                                    />
+                                                </div>
+                                            </td>
+                                            <th scope="row">{{$index + 1}}</th>
+                                            <td>{{x.detailBillID}}</td>
+                                            <td>{{x.price}}</td>
+                                            <td>{{x.amount}}</td>
+                                            <td>{{x.productId}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer">
+                <div class="footer_2">
+                    <h3 class="title_4">VỀ CHÚNG TÔI</h3>
+                    <div class="title_5" style="color: gray">Levents® - Popular Streetwear Brand</div>
+                    <div class="title_6">
+                        <ul style="color: gray">
+                            <li>HỘ KINH DOANH Red Label</li>
+
+                            <li>GPKD được cấp bởi Cục Cảnh sát QLHC & TTXH</li>
+
+                            <li>Trụ sở hộ kinh doanh: 842 Sư Vạn Hạnh</li>
+
+                            <li>Mä só thuê: 41J8031547</li>
+
+                            <li>Ngày cấp: 06/07/2021</li>
+
+                            <li>Người đại diện: Nguyễn Trần Duy Khiết</li>
+
+                            <li>Mã Số thuế cá nhân: 8748861448-001</li>
+                        </ul>
+                    </div>
+                    <div class="chungnhan">
+                        <img class="img_chungnhan" src="/asset/img/logoSaleNoti-1.png" alt="" />
+                    </div>
+                </div>
+                <div class="footer_3">
+                    <div class="colum_1">
+                        <h3 class="title_colum">LIÊN HỆ</h3>
+                        <ul class="cl1">
+                            <li>Hotline</li>
+                            <li id="bold">1900633028</li>
+                            <li id="infor">Email</li>
+                            <li id="bold">Customer@levents.asia</li>
+                            <li id="infor">Thứ Hai-Chủ nhật</li>
+                            <li id="bold">9:30~21:30</li>
+                            <li id="infor">Email liên hệ công việc</li>
+                            <li id="bold">business@levents.asia</li>
+                        </ul>
+                    </div>
+                    <div class="colum_2">
+                        <h3 class="title_colum2">DANH MỤC SẢN PHẨM</h3>
+                        <ul class="cl2">
+                            <li>Tất cả</li>
+                            <li>New Arrival</li>
+                            <li>Áo</li>
+                            <li>Quần</li>
+                            <li>Outerwear</li>
+                            <li>Ba lô</li>
+                        </ul>
+                    </div>
+                    <div class="colum_3">
+                        <h3 class="title_colum3">HỖ TRỢ</h3>
+                        <ul class="cl3">
+                            <li>LÌ VEN FABRIC</li>
+                            <li>Tài khoản</li>
+                            <li>Chính sách vận chuyển</li>
+                            <li>Thanh toán trực tuyến</li>
+                            <li>Chính sách bảo mật</li>
+                        </ul>
+                    </div>
+
+                    <div class="colum_4">
+                        <h3 class="title_colum4">CỬA HÀNG</h3>
+                        <ul class="cl4">
+                            <li>842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM</li>
+                            <li>The New Playground, 04, Quận 1, HCM</li>
+                            <li>54, Mậu Thân, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../asset/js/angular.min.js"></script>
+        <script src="../asset/js/jquery-3.6.0.min.js"></script>
+        <script src="../asset/js/global.js"></script>
+        <script src="./assets/js/bill.js"></script>
+    </body>
+</html>
