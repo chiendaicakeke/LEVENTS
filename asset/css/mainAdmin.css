@@ -270,6 +270,7 @@ tr {
   .header_categories-btn,
   .sideBar {
     display: none;
+    background-color: #3d8eff;
   }
   .app .container .content {
     width: 100%;

@@ -437,3 +437,24 @@ button#centerButton:hover::after {
   align-items: center;
   width: 100%;
 }
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  height: 985px;
+}
+.mySlides {
+  display: none;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

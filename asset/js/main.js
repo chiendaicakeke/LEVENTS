@@ -1,26 +1,39 @@
-// Lắng nghe sự kiện cuộn trang
-window.addEventListener('scroll', function () {
-    // Kiểm tra vị trí cuộn trang
-    if (document.documentElement.scrollTop > 100) {
-      // Hiển thị nút scroll top khi người dùng cuộn xuống dưới 100px
-      document.getElementById('scrollToTopBtn').style.display = 'block';
-    } else {
-      // Ẩn nút scroll top khi người dùng ở đầu trang hoặc cuộn lên trên 100px
-      document.getElementById('scrollToTopBtn').style.display = 'none';
-    }
-  });
-  
-  // Xử lý sự kiện khi nút scroll top được nhấp
-  document.getElementById('scrollToTopBtn').addEventListener('click', function () {
-    // Cuộn trang về đầu trang một cách mượt mà
+window.addEventListener("scroll", function () {
+  if (document.documentElement.scrollTop > 100) {
+    document.getElementById("scrollToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("scrollToTopBtn").style.display = "none";
+  }
+});
+
+document
+  .getElementById("scrollToTopBtn")
+  .addEventListener("click", function () {
+    3;
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
-  
-var cart = document.querySelector(".button__li.cart")
-cart.onclick=function(){
-  location.assign('detail.html')
+
+var cart = document.querySelector(".button__li.cart");
+cart.onclick = function () {
+  location.assign("detail.html");
+};
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-  

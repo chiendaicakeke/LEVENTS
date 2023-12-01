@@ -128,8 +128,8 @@
                   id="tongQuan"
                   class="sideBar_item-link"
                 >
-                  <i class="fa-solid fa-house"></i>
-                  <span class="text sideBar_item-text">Home</span>
+                  
+                  <span class="text sideBar_item-text">Trang Chủ</span>
                 </a>
               </li>
 
@@ -139,15 +139,15 @@
                   id="road-map"
                   class="sideBar_item-link"
                 >
-                  <i class="fa-solid fa-road"></i>
-                  <span class="text sideBar_item-text">Road map</span>
+                 
+                  <span class="text sideBar_item-text">Sản Phẩm</span>
                 </a>
               </li>
 
               <li class="sideBar_item">
                 <a href="#/blog" id="blog" class="sideBar_item-link">
-                  <i class="fa-solid fa-newspaper"></i>
-                  <span class="text sideBar_item-text">Blog</span>
+                 
+                  <span class="text sideBar_item-text">Hóa Đơn</span>
                 </a>
               </li>
             </ul>
@@ -158,104 +158,236 @@
         <div id="content" class="content">
           <div class="grid">
             <div class="title">
-              <h3>Hoạt động hôm nay</h3>
+              <h3>Thống kê hôm nay </h3>
             </div>
             <div class="row">
               <div class="col l-4">
                 <div class="padding-box">
-                  <div class="box" style="background-color: rgb(95, 80, 230)">
+                  <div class="box" style="background-color: rgb(80, 165, 230)">
                     <div class="box-left"><i class="fas fa-signal"></i></div>
                     <div class="box-right">
-                      Tiền bán hàng<br /><span>0</span>đ
+                      Doanh Thu Trong Ngày<br /><span>0</span>đ
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col l-4">
                 <div class="padding-box">
-                  <div class="box" style="background-color:rgb(95, 80, 230)">
+                  <div class="box" style="background-color:rgb(80, 168, 230)">
                     <div class="box-left"><i class="fas fa-signal"></i></div>
                     <div class="box-right">
-                      Tiền bán hàng<br /><span>0</span>đ
+                      Doanh Thu Tháng<br /><span>0</span>đ
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col l-4">
                 <div class="padding-box">
-                  <div class="box" style="background-color: rgb(95, 80, 230)">
+                  <div class="box" style="background-color: rgb(80, 160, 230)">
                     <div class="box-left"><i class="fas fa-signal"></i></div>
                     <div class="box-right">
-                      Tiền bán hàng<br /><span>0</span>đ
+                      Doanh Thu Năm<br /><span>0</span>đ
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
+           
+          </div>
+          <div class="grid">
+            <div class="title">
+             
+            </div>
             <div class="row">
               <div class="col l-4">
-                <div class="padding-box">
-                  <div class="box2" style="border: 1px solid #6fb3e0">
-                    <div
-                      class="box2-top"
-                      style="border-bottom: 1px solid #6fb3e0"
+                <div class="mt-4">
+                  <form
+                    name="form-course"
+                    class="row needs-validation"
+                    method="POST"
+                  >
+                    <input
+                      type="hidden"
+                      class="form-control"
+                      id="courseId"
+                      name="courseId"
+                      value="0"
+                    />
+
+                    <div class="col l-12 mt-12">
+                      <label for="name" class="form-label">Mã hóa đơn</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nameCourse"
+                        name="nameCourse"
+                      />
+                    </div>
+
+                    <div class="col l-12 mt-12">
+                      <label for="description" class="form-label">Tên sản phẩm</label>
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        id="description"
+                        name="description"
+                        style="resize: vertical"
+                      ></textarea>
+                    </div>
+
+                    <div class="col l-12 mt-12">
+                      <label for="image" class="form-label">Tổng tiền</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="image"
+                        name="image"
+                      />
+                    </div>
+
+                    <div class="col l-12 mt-12">
+                      <label for="level" class="form-label">Size</label>
+                      <select class="form-select" id="level" name="level">
+                        <option selected disabled value="">Choose...</option>
+                        <option value="Trình độ trung bình">1</option>
+                        <option value="Trình độ trung bình">2</option>
+                        <option value="Trình độ trung bình">3</option>
+                      </select>
+                    </div>
+
+                    <div class="col l-12 mt-12">
+                      <label for="price" class="form-label">Giá</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="price"
+                        name="price"
+                      />
+                    </div>
+
+                    <input
+                      type="hidden"
+                      class="form-control"
+                      id="slug"
+                      name="slug"
+                    />
+
+                    <div class="col l-12 mt-12">
+                      <label for="level" class="form-label"
+                        >ID Bộ sưu tập</label
+                      >
+                      <select
+                        class="form-select"
+                        id="categoryId"
+                        name="categoryId"
+                      >
+                        <option selected disabled value="">Choose...</option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                      </select>
+                    </div>
+
+                    <div class="col l-12 mt-12">
+                      <label for="price" class="form-label">Mã sản phẩm</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="teacherId"
+                        name="teacherId"
+                      />
+                    </div>
+
+                    <div class="col l-12 mt-12">
+                      <button
+                        id="btn-course"
+                        class="btn btn-primary"
+                        type="submit"
+                      >
+                        Thêm
+                      </button>
+                      <button
+                      id="btn-course"
+                      class="btn btn-primary"
+                      type="submit"
                     >
-                      <i class="fas fa-signal"></i> Hoạt động
+                      Sửa
+                    </button>
                     </div>
-                    <div class="box2-bot">
-                      <div class="box2-bot-left">Tiền bán hàng</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Số đơn hàng</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Số sản phẩm</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Khách trả hàng</div>
-                      <div class="box2-bot-right">0</div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
-              <div class="col l-4">
-                <div class="padding-box">
-                  <div class="box2" style="border: 1px solid #6fb3e0">
-                    <div
-                      class="box2-top"
-                      style="border-bottom: 1px solid #6fb3e0"
-                    >
-                      <i class="fas fa-signal"></i> Hoạt động
-                    </div>
-                    <div class="box2-bot">
-                      <div class="box2-bot-left">Tiền bán hàng</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Số đơn hàng</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Số sản phẩm</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Khách trả hàng</div>
-                      <div class="box2-bot-right">0</div>
-                    </div>
+
+              <div class="col l-8">
+                <div class="mt-4">
+                  <div class="search">
+                    <input
+                      type="text"
+                      class="search-type"
+                      placeholder="Nhập mã, tên sản phẩm..."
+                    />
+                    <button class="btn btn-primary">
+                      <i class="fas fas fa-search"></i> Tìm kiếm
+                    </button>
                   </div>
+
+                  <form name="container-form" action="">
+                    <table class="table">
+                      <tr class="colum">
+                        <th  class="colum-title one">Mã</th>
+                        <th class="colum-title">Tài khoản</th>
+                        <th class="colum-title">Mật khẩu</th>
+                        <th class="colum-title">Mật khẩu</th>
+                        <th class="colum-title second">Chức năng</th>
+                      </tr>
+                    
+                      <tr ng-repeat="x in listItem.data" class="colum-content-box">
+                        <th class="colum-content">{{x.nameCourse}}</th>
+                        <th class="colum-content">{{x.level}}</th>
+                        <th class="colum-content">@{{x.createdAt}}</th>
+                        <th class="colum-content">@{{x.createdAt}}</th>
+
+                        <th class="colum-content">
+                          <a
+                          href=""
+                          class="btn btn-link"
+                          data-id="{{x.courseId}}"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete-course-modal"
+                          >Xóa
+                        </a>
+                        <a
+                          href=""
+                          class="btn btn-link"
+                          data-id="{{x.courseId}}"
+                          >Chi tiết
+                            </a>
+                        </th>
+                      </tr>
+                    </table>
+                  </form>
                 </div>
-              </div>
-              <div class="col l-4">
+
                 <div class="padding-box">
-                  <div class="box2" style="border: 1px solid #6fb3e0">
-                    <div
-                      class="box2-top"
-                      style="border-bottom: 1px solid #6fb3e0"
-                    >
-                      <i class="fas fa-signal"></i> Hoạt động
+                  <div class="box-sum">
+                    <div class="box-left">
+                      Số lượng sản phẩm:
+                      <span id="soluong">{{listItem.totalItems}}</span>
                     </div>
-                    <div class="box2-bot">
-                      <div class="box2-bot-left">Tiền bán hàng</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Số đơn hàng</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Số sản phẩm</div>
-                      <div class="box2-bot-right">0</div>
-                      <div class="box2-bot-left">Khách trả hàng</div>
-                      <div class="box2-bot-right">0</div>
+                    <div class="box-right">
+                      <button class="btn-primary">
+                        <i class="fas fa-angle-left"></i>
+                      </button>
+                      <button data-id="1" class="btn-primary">1</button>
+                      <button data-id="2" class="btn-primary">2</button>
+                      <button data-id="3" class="btn-primary">3</button>
+                      <button data-id="4" class="btn-primary">4</button>
+                      <button class="btn-primary">
+                        <i class="fas fa-angle-right"></i>
+                      </button>
                     </div>
                   </div>
                 </div>
