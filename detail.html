@@ -1,315 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./asset/css/detail.css" />
-        <link rel="stylesheet" href="./asset/font/fontawesome-free-6.4.0-web/css/all.min.css" />
-        <title>Levents®</title>
-    </head>
-    <body ng-app="AppBanHang" ng-controller="DetailCtrl">
-        <header id="header">
-            <div class="header-banner">
-                <div class="header-banner1">
-                    <i class="fa-solid fa-earth-americas"></i>
-                    <span class="ship">FREE SHIP CHO HÓA ĐƠN TỪ 1.000.000</span>
-                </div>
-                <div class="header-banner2">
-                    <span class="mua">MUA NGAY ! </span>
-                    <i class="fa-solid fa-circle-arrow-right"></i>
-                </div>
-            </div>
-            <div class="navbar">
-                <div class="navbar-logo">
-                    <img class="logo" src="/asset/img/logo.png" alt="" />
-                </div>
-
-                <div class="button">
-                    <ul class="button__ul">
-                        <li class="button__li">
-                            <i class="fa-regular fa-bell"></i>
-                        </li>
-                        <li class="button__li">
-                            <p class="spyt">Sản phẩm yêu thích</p>
-                        </li>
-                        <li class="button__li">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </li>
-                        <li class="button__li cart">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </li>
-                        <li class="button__li">
-                            <i class="fa-regular fa-circle-user"></i>
-                        </li>
-                        <li class="button__li">
-                            <img class="vietnam" src="/asset/img/tải xuống.png" alt="" />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="menu">
-                <ul class="menu__1">
-                    <li class="menu__2">
-                        <a href="" class="menu__3">Về chúng tôi</a>
-                    </li>
-                    <li class="menu__2">
-                        <a href="" class="menu__3">Cửa hàng v</a>
-                        <ul class="menu__4">
-                            <li class="menu__5">
-                                <a href="" class="menu__6">Tất cả</a>
-                            </li>
-                            <li class="menu__5">
-                                <a href="" class="menu__6">Áo</a>
-                            </li>
-                            <li class="menu__5">
-                                <a href="" class="menu__6">Quần</a>
-                            </li>
-                            <li class="menu__5">
-                                <a href="" class="menu__6">Áo khoác</a>
-                            </li>
-                            <li class="menu__5">
-                                <a href="" class="menu__6">Phụ kiện</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__2">
-                        <a href="" class="sale">Giảm giá</a>
-                    </li>
-                    <li class="menu__2">
-                        <a href="" class="menu__3">Bộ sưu tập</a>
-                    </li>
-                    <li class="menu__2">
-                        <a href="" class="menu__3">Bộ phối</a>
-                    </li>
-                    <li class="menu__2">
-                        <a href="" class="menu__3">Bài viết</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-
-        <div class="menu">
-            <ul class="menu__1">
-                <li class="menu__2">
-                    <a href="" class="menu__3">Về chúng tôi</a>
-                </li>
-                <li class="menu__2">
-                    <a href="" class="menu__3">Cửa hàng v</a>
-                    <ul class="menu__4">
-                        <li class="menu__5">
-                            <a href="" class="menu__6">Tất cả</a>
-                        </li>
-                        <li class="menu__5">
-                            <a href="" class="menu__6">Áo</a>
-                        </li>
-                        <li class="menu__5">
-                            <a href="" class="menu__6">Quần</a>
-                        </li>
-                        <li class="menu__5">
-                            <a href="" class="menu__6">Áo khoác</a>
-                        </li>
-                        <li class="menu__5">
-                            <a href="" class="menu__6">Phụ kiện</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu__2">
-                    <a href="" class="sale">Giảm giá</a>
-                </li>
-                <li class="menu__2">
-                    <a href="" class="menu__3">Bộ sưu tập</a>
-                </li>
-                <li class="menu__2">
-                    <a href="" class="menu__3">Bộ phối</a>
-                </li>
-                <li class="menu__2">
-                    <a href="" class="menu__3">Bài viết</a>
-                </li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/css/detail.css" />
+    <link
+      rel="stylesheet"
+      href="./asset/font/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+    <title>Levents®</title>
+  </head>
+  <body ng-app="AppBanHang" ng-controller="DetailCtrl">
+    <header id="header">
+      <div class="header-banner">
+        <div class="header-banner1">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span class="ship">FREE SHIP CHO HÓA ĐƠN TỪ 1.000.000</span>
+        </div>
+        <div class="header-banner2">
+          <span class="mua">MUA NGAY ! </span>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar-logo">
+          <img class="logo" src="/asset/img/logo.png" alt="" />
         </div>
 
-        <div id="content">
-            <div class="left">
-                <div class="img">
-                    <img src="{{SanPham.image}}" alt="" class="img_main" />
-                </div>
-                <div class="img">
-                    <img src="{{SanPham.imageAfter}}" alt="" class="img_main" />
-                </div>
-            </div>
+        <div class="button">
+          <ul class="button__ul">
+            <li class="button__li">
+              <i class="fa-regular fa-bell"></i>
+            </li>
+            <li class="button__li">
+              <p class="spyt">Sản phẩm yêu thích</p>
+            </li>
+            <li class="button__li">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="button__li cart">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </li>
+            <li class="button__li">
+              <i class="fa-regular fa-circle-user"></i>
+            </li>
+            <li class="button__li">
+              <img class="vietnam" src="/asset/img/tải xuống.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="right">
-                <h3 class="tittle">{{SanPham.productName}}</h3>
+      <div class="menu">
+        <ul class="menu__1">
+          <li class="menu__2">
+            <a href="" class="menu__3">Về chúng tôi</a>
+          </li>
+          <li class="menu__2">
+            <a href="" class="menu__3">Cửa hàng v</a>
+            <ul class="menu__4">
+              <li class="menu__5">
+                <a href="" class="menu__6">Tất cả</a>
+              </li>
+              <li class="menu__5">
+                <a href="" class="menu__6">Áo</a>
+              </li>
+              <li class="menu__5">
+                <a href="" class="menu__6">Quần</a>
+              </li>
+              <li class="menu__5">
+                <a href="" class="menu__6">Áo khoác</a>
+              </li>
+              <li class="menu__5">
+                <a href="" class="menu__6">Phụ kiện</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__2">
+            <a href="" class="sale">Giảm giá</a>
+          </li>
+          <li class="menu__2">
+            <a href="" class="menu__3">Bộ sưu tập</a>
+          </li>
+          <li class="menu__2">
+            <a href="" class="menu__3">Bộ phối</a>
+          </li>
+          <li class="menu__2">
+            <a href="" class="menu__3">Bài viết</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-                <h4 class="gia">{{SanPham.price}} vnđ</h4>
+    <div class="menu">
+      <ul class="menu__1">
+        <li class="menu__2">
+          <a href="" class="menu__3">Về chúng tôi</a>
+        </li>
+        <li class="menu__2">
+          <a href="" class="menu__3">Cửa hàng v</a>
+          <ul class="menu__4">
+            <li class="menu__5">
+              <a href="" class="menu__6">Tất cả</a>
+            </li>
+            <li class="menu__5">
+              <a href="" class="menu__6">Áo</a>
+            </li>
+            <li class="menu__5">
+              <a href="" class="menu__6">Quần</a>
+            </li>
+            <li class="menu__5">
+              <a href="" class="menu__6">Áo khoác</a>
+            </li>
+            <li class="menu__5">
+              <a href="" class="menu__6">Phụ kiện</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__2">
+          <a href="" class="sale">Giảm giá</a>
+        </li>
+        <li class="menu__2">
+          <a href="" class="menu__3">Bộ sưu tập</a>
+        </li>
+        <li class="menu__2">
+          <a href="" class="menu__3">Bộ phối</a>
+        </li>
+        <li class="menu__2">
+          <a href="" class="menu__3">Bài viết</a>
+        </li>
+      </ul>
+    </div>
 
-                <div class="color">
-                    <div class="txt">Màu sắc: <span class="text-color">Blue</span></div>
-                    <div class="fl-con">
-                        <label class="shop-dt__co m-custom-checkbox active" stt="Out of stock">
-                            <img
-                                width="150"
-                                height="150"
-                                src="{{SanPham.image}}"
-                                class="attachment-thumbnail size-thumbnail wp-post-image"
-                                alt=""
-                                sizes="(max-width: 150px) 100vw, 150px"
-                            />
-                        </label>
-                    </div>
+    <div id="content">
+      <div class="left">
+        <div class="img">
+          <img src="{{SanPham.image}}" alt="" class="img_main" />
+        </div>
+        <div class="img">
+          <img src="{{SanPham.imageAfter}}" alt="" class="img_main" />
+        </div>
+      </div>
 
-                    <div class="size-container">
-                        <h1 class="TextSize">SIZE:</h1>
-                        <label>
-                            <input type="radio" name="size" value="size1" />
-                            <p>0</p>
-                        </label>
+      <div class="right">
+        <h3 class="tittle">{{SanPham.productName}}</h3>
 
-                        <label>
-                            <input type="radio" name="size" value="size2" />
-                            <p>1</p>
-                        </label>
+        <h4 class="gia">{{SanPham.price}} vnđ</h4>
 
-                        <label>
-                            <input type="radio" name="size" value="size3" />
-                            <p>2</p>
-                        </label>
+        <div class="color">
+          <div class="txt">Màu sắc: <span class="text-color">Blue</span></div>
+          <div class="fl-con">
+            <label
+              class="shop-dt__co m-custom-checkbox active"
+              stt="Out of stock"
+            >
+              <img
+                width="150"
+                height="150"
+                src="{{SanPham.image}}"
+                class="attachment-thumbnail size-thumbnail wp-post-image"
+                alt=""
+                sizes="(max-width: 150px) 100vw, 150px"
+              />
+            </label>
+          </div>
 
-                        <label>
-                            <input type="radio" name="size" value="size3" />
-                            <p>3</p>
-                        </label>
+          <div class="size-container">
+            <h1 class="TextSize">SIZE:</h1>
+            <label>
+              <input type="radio" name="size" value="size1" />
+              <p>0</p>
+            </label>
 
-                        <label>
-                            <input type="radio" name="size" value="size3" />
-                            <p>4</p>
-                        </label>
-                    </div>
-                </div>
-                <div class="add">
-                    <button id="AddOrder">THÊM VÀO GIỎ HÀNG</button>
-                </div>
-                <div class="line"></div>
-                <p class="info-title" onclick="toggleInfo()">THÔNG TIN:</p>
-                <div class="infor">
-                    <p>{{SanPham.productName}}</p>
-                    <p>Color: Blue</p>
-                    <p>Material: Cotton</p>
-                    <p>Size: 2/3/4</p>
-                    <p>{{SanPham.description}}</p>
-                </div>
-                <div class="line"></div>
-                <div class="BangSize">
-                    <p class="bang-size" onclick="toggleSize()">BẢNG SIZE:</p>
-                    <img class="img-size" src="/asset/img/bangsizeShirt.png" alt="" />
-                </div>
-                <div class="line"></div>
-                <div class="BaoHanh">
-                    <p class="policy-title" onclick="toggleWarranty()">CHÍNH SÁCH BẢO HÀNH:</p>
-                    <div class="policy-content">
-                        <p>
-                            1. Đối tượng & thời gian áp dụng: Đối với sản phẩm áo, quần: Trong 14 ngày, từ ngày mua hàng
-                            theo thời gian ghi trên hoá đơn với các trường hợp bung chỉ, bung nút, kỹ thuật may, giãn cổ
-                            áo, quần,… và các trường hợp khác mà Levents® có khả năng sửa chữa được. Đối với sản phẩm
-                            phụ kiện: Trong 30 ngày, từ ngày mua hàng theo thời gian ghi trên hoá đơn với trường hợp
-                            bung đường chỉ, bung quai đeo, hư khoá kéo và tất cả những lỗi kỹ thuật do nhà sản xuất.
-                        </p>
-                        <p>Bạn sẽ được đổi sang sản phẩm mới 100%.</p>
-                        <p>
-                            2. Thời gian bảo hành: Trong 07-20 ngày tuỳ vào tình trạng sản phẩm sau khi nhận được hàng
-                            từ bạn.
-                        </p>
-                        <p>
-                            3. Trường hợp không được bảo hành: Sản phẩm đã qua sử dụng bị dơ bẩn, đã được sửa chữa bởi
-                            người sử dụng. Sản phẩm đã quá hạn bảo hành. Lỗi do bảo quản không đúng quy cách như: sử
-                            dụng chất tẩy rửa mạnh để giặt và gây lem màu, phơi nắng quá lâu làm hư hại sản phẩm… slàm
-                            cho tôi văn bản này như trên đi ẩn đoạn dưới Chính Sách Bảo Hành
-                        </p>
-                    </div>
-                </div>
-                <div class="line"></div>
-            </div>
+            <label>
+              <input type="radio" name="size" value="size2" />
+              <p>1</p>
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="size3" />
+              <p>2</p>
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="size3" />
+              <p>3</p>
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="size3" />
+              <p>4</p>
+            </label>
+          </div>
+        </div>
+        <div class="add">
+          <button id="AddOrder">THÊM VÀO GIỎ HÀNG</button>
         </div>
         <div class="line"></div>
-
-        <div id="footer">
-            <div class="footer_2">
-                <h3 class="title_4">VỀ CHÚNG TÔI</h3>
-                <div class="title_5" style="color: gray">Levents® - Popular Streetwear Brand</div>
-                <div class="title_6">
-                    <ul style="color: gray">
-                        <li>HỘ KINH DOANH Red Label</li>
-
-                        <li>GPKD được cấp bởi Cục Cảnh sát QLHC & TTXH</li>
-
-                        <li>Trụ sở hộ kinh doanh: 842 Sư Vạn Hạnh, Phường 13, Quận 10, Tp. Hồ Chí Minh</li>
-
-                        <li>Mä só thuê: 41J8031547</li>
-
-                        <li>Ngày cấp: 06/07/2021</li>
-
-                        <li>Người đại diện: Nguyễn Trần Duy Khiết</li>
-
-                        <li>Mã Số thuế cá nhân: 8748861448-001</li>
-                    </ul>
-                </div>
-                <div class="chungnhan">
-                    <img class="img_chungnhan" src="/asset/img/logoSaleNoti-1.png" alt="" />
-                </div>
-            </div>
-            <div class="footer_3">
-                <div class="colum_1">
-                    <h3 class="title_colum">LIÊN HỆ</h3>
-                    <ul class="cl1">
-                        <li>Hotline</li>
-                        <li id="bold">1900633028</li>
-                        <li id="infor">Email</li>
-                        <li id="bold">Customer@levents.asia</li>
-                        <li id="infor">Thứ Hai-Chủ nhật</li>
-                        <li id="bold">9:30~21:30</li>
-                        <li id="infor">Email liên hệ công việc</li>
-                        <li id="bold">business@levents.asia</li>
-                    </ul>
-                </div>
-                <div class="colum_2">
-                    <h3 class="title_colum2">DANH MỤC SẢN PHẨM</h3>
-                    <ul class="cl2">
-                        <li>Tất cả</li>
-                        <li>New Arrival</li>
-                        <li>Áo</li>
-                        <li>Quần</li>
-                        <li>Outerwear</li>
-                        <li>Ba lô</li>
-                    </ul>
-                </div>
-                <div class="colum_3">
-                    <h3 class="title_colum3">HỖ TRỢ</h3>
-                    <ul class="cl3">
-                        <li>LÌ VEN FABRIC</li>
-                        <li>Tài khoản</li>
-                        <li>Chính sách vận chuyển</li>
-                        <li>Thanh toán trực tuyến</li>
-                        <li>Chính sách bảo mật</li>
-                    </ul>
-                </div>
-
-                <div class="colum_4">
-                    <h3 class="title_colum4">CỬA HÀNG</h3>
-                    <ul class="cl4">
-                        <li>842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM</li>
-                        <li>The New Playground, 04, Quận 1, HCM</li>
-                        <li>54, Mậu Thân, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
-                    </ul>
-                </div>
-            </div>
+        <p class="info-title" onclick="toggleInfo()">THÔNG TIN:</p>
+        <div class="infor">
+          <p>{{SanPham.productName}}</p>
+          <p>Color: Blue</p>
+          <p>Material: Cotton</p>
+          <p>Size: 2/3/4</p>
+          <p>{{SanPham.description}}</p>
         </div>
-        <button id="scrollToTopBtn">&#9650;</button>
+        <div class="line"></div>
+        <div class="BangSize">
+          <p class="bang-size" onclick="toggleSize()">BẢNG SIZE:</p>
+          <img class="img-size" src="/asset/img/bangsizeShirt.png" alt="" />
+        </div>
+        <div class="line"></div>
+        <div class="BaoHanh">
+          <p class="policy-title" onclick="toggleWarranty()">
+            CHÍNH SÁCH BẢO HÀNH:
+          </p>
+          <div class="policy-content">
+            <p>
+              1. Đối tượng & thời gian áp dụng: Đối với sản phẩm áo, quần: Trong
+              14 ngày, từ ngày mua hàng theo thời gian ghi trên hoá đơn với các
+              trường hợp bung chỉ, bung nút, kỹ thuật may, giãn cổ áo, quần,… và
+              các trường hợp khác mà Levents® có khả năng sửa chữa được. Đối với
+              sản phẩm phụ kiện: Trong 30 ngày, từ ngày mua hàng theo thời gian
+              ghi trên hoá đơn với trường hợp bung đường chỉ, bung quai đeo, hư
+              khoá kéo và tất cả những lỗi kỹ thuật do nhà sản xuất.
+            </p>
+            <p>Bạn sẽ được đổi sang sản phẩm mới 100%.</p>
+            <p>
+              2. Thời gian bảo hành: Trong 07-20 ngày tuỳ vào tình trạng sản
+              phẩm sau khi nhận được hàng từ bạn.
+            </p>
+            <p>
+              3. Trường hợp không được bảo hành: Sản phẩm đã qua sử dụng bị dơ
+              bẩn, đã được sửa chữa bởi người sử dụng. Sản phẩm đã quá hạn bảo
+              hành. Lỗi do bảo quản không đúng quy cách như: sử dụng chất tẩy
+              rửa mạnh để giặt và gây lem màu, phơi nắng quá lâu làm hư hại sản
+              phẩm… slàm cho tôi văn bản này như trên đi ẩn đoạn dưới Chính Sách
+              Bảo Hành
+            </p>
+          </div>
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="line"></div>
 
-        <script src="./asset/js/global.js"></script>
-        <script src="./asset/js/angular.min.js"></script>
-        <script src="./asset/js/jquery-3.6.0.min.js"></script>
-        <script src="./asset/js/detail.js"></script>
-    </body>
+    <div id="footer">
+      <div class="footer_2">
+        <h3 class="title_4">VỀ CHÚNG TÔI</h3>
+        <div class="title_5" style="color: gray">
+          Levents® - Popular Streetwear Brand
+        </div>
+        <div class="title_6">
+          <ul style="color: gray">
+            <li>HỘ KINH DOANH Red Label</li>
+
+            <li>GPKD được cấp bởi Cục Cảnh sát QLHC & TTXH</li>
+
+            <li>
+              Trụ sở hộ kinh doanh: 842 Sư Vạn Hạnh, Phường 13, Quận 10, Tp. Hồ
+              Chí Minh
+            </li>
+
+            <li>Mä só thuê: 41J8031547</li>
+
+            <li>Ngày cấp: 06/07/2021</li>
+
+            <li>Người đại diện: Nguyễn Trần Duy Khiết</li>
+
+            <li>Mã Số thuế cá nhân: 8748861448-001</li>
+          </ul>
+        </div>
+        <div class="chungnhan">
+          <img
+            class="img_chungnhan"
+            src="/asset/img/logoSaleNoti-1.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="footer_3">
+        <div class="colum_1">
+          <h3 class="title_colum">LIÊN HỆ</h3>
+          <ul class="cl1">
+            <li>Hotline</li>
+            <li id="bold">1900633028</li>
+            <li id="infor">Email</li>
+            <li id="bold">Customer@levents.asia</li>
+            <li id="infor">Thứ Hai-Chủ nhật</li>
+            <li id="bold">9:30~21:30</li>
+            <li id="infor">Email liên hệ công việc</li>
+            <li id="bold">business@levents.asia</li>
+          </ul>
+        </div>
+        <div class="colum_2">
+          <h3 class="title_colum2">DANH MỤC SẢN PHẨM</h3>
+          <ul class="cl2">
+            <li>Tất cả</li>
+            <li>New Arrival</li>
+            <li>Áo</li>
+            <li>Quần</li>
+            <li>Outerwear</li>
+            <li>Ba lô</li>
+          </ul>
+        </div>
+        <div class="colum_3">
+          <h3 class="title_colum3">HỖ TRỢ</h3>
+          <ul class="cl3">
+            <li>LÌ VEN FABRIC</li>
+            <li>Tài khoản</li>
+            <li>Chính sách vận chuyển</li>
+            <li>Thanh toán trực tuyến</li>
+            <li>Chính sách bảo mật</li>
+          </ul>
+        </div>
+
+        <div class="colum_4">
+          <h3 class="title_colum4">CỬA HÀNG</h3>
+          <ul class="cl4">
+            <li>842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM</li>
+            <li>The New Playground, 04, Quận 1, HCM</li>
+            <li>54, Mậu Thân, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button id="scrollToTopBtn">&#9650;</button>
+
+    <script src="./asset/js/global.js"></script>
+    <script src="./asset/js/angular.min.js"></script>
+    <script src="./asset/js/jquery-3.6.0.min.js"></script>
+    <script src="./asset/js/detail.js"></script>
+  </body>
 </html>
